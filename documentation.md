@@ -194,4 +194,4 @@ Additionally, **Google Gemini AI** is used to:
 
 ---
 
-By understanding these concepts, parameters, and functions, you can confidently explain and modify the project as needed. Let me know if you'd like further clarification or enhancements!
+See the [README](README.md) file for more details.
