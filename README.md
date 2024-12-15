@@ -122,4 +122,4 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 ---
 
 ## **Acknowledgements**
-Special thanks to the faculty of JIS College of Engineering for their guidance and support throughout this project.
+Special thanks to the authors of the imported modules for their invaluable tools and resources.
