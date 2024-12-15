@@ -37,7 +37,7 @@ mbo_knapsack_project/
 ## **Installation**
 1. **Clone the Repository**
    ```bash
-   git clone https://github.com/arkodeepsen/Monarch-Butterfly-Optimization-Knapsack-Problem.git
+   git clone https://github.com/arkodeepsen/Monarch-Butterfly.git
    cd mbo_knapsack_project
    ```
 
