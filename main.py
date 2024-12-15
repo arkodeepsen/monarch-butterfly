@@ -26,33 +26,8 @@ class KnapsackApp:
         Path('data/knapsack_instances').mkdir(parents=True, exist_ok=True)
 
     def setup_ui(self):
-        # Configure root window to open in full screen
-        self.root.state('zoomed')
-        
-        # Create a main frame with a scrollbar
-        main_frame = ttk.Frame(self.root)
-        main_frame.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
-        
-        # Add scrollbar
-        scrollbar = ttk.Scrollbar(main_frame, orient=tk.VERTICAL)
-        scrollbar.pack(side=tk.RIGHT, fill=tk.Y)
-        
-        # Create a canvas to hold the content
-        canvas = tk.Canvas(main_frame, yscrollcommand=scrollbar.set)
-        canvas.pack(side=tk.LEFT, fill=tk.BOTH, expand=True)
-        
-        # Configure scrollbar to scroll the canvas
-        scrollbar.config(command=canvas.yview)
-        
-        # Create a frame inside the canvas
-        content_frame = ttk.Frame(canvas)
-        canvas.create_window((0, 0), window=content_frame, anchor='nw')
-        
-        # Update the canvas scroll region when the content changes
-        content_frame.bind('<Configure>', lambda e: canvas.configure(scrollregion=canvas.bbox('all')))
-        
         # Left panel for controls
-        left_panel = ttk.Frame(content_frame, padding="10")
+        left_panel = ttk.Frame(self.root, padding="10")
         left_panel.grid(row=0, column=0, sticky=(tk.W, tk.E, tk.N, tk.S))
         
         # Generate problem button
@@ -89,20 +64,19 @@ class KnapsackApp:
         ttk.Button(left_panel, text="Solve Problem", command=self.solve_problem).pack(pady=5)
         
         # Right panel for display
-        right_panel = ttk.Frame(content_frame, padding="10")
+        right_panel = ttk.Frame(self.root, padding="10")
         right_panel.grid(row=0, column=1, sticky=(tk.W, tk.E, tk.N, tk.S))
         
         # Problem description
-        self.problem_text = scrolledtext.ScrolledText(right_panel, width=60, height=30)
-        self.problem_text.pack(pady=5, padx=5, fill=tk.BOTH, expand=True)
+        self.problem_text = scrolledtext.ScrolledText(right_panel, width=150, height=10)
+        self.problem_text.pack(pady=5)
         
         # Results
-        self.result_text = scrolledtext.ScrolledText(right_panel, width=60, height=30)
-        self.result_text.pack(pady=5, padx=5, fill=tk.BOTH, expand=True)
+        self.result_text = scrolledtext.ScrolledText(right_panel, width=150, height=10)
+        self.result_text.pack(pady=5)
         
         # Plots frame
-        self.plots_frame = ttk.Frame(content_frame)
-        self.plots_frame.grid(row=1, column=0, columnspan=2, sticky=(tk.W, tk.E, tk.N, tk.S))
+        self.plots_frame = ttk.Frame(right_panel)
         self.plots_frame.pack(fill=tk.BOTH, expand=True)
 
     def generate_problem(self):
