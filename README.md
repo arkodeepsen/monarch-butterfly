@@ -34,6 +34,19 @@ mbo_knapsack_project/
 
 ---
 
+## **Getting Started**
+
+Feel free to use this project for your first or second-semester college project. Just fork and clone this repo. Here 's a step-by-step guide:
+
+1. **Star the Project**
+   - Yes, this is required for the program to function properly. Go ahead, click that star button on GitHub!
+
+2. **Read the Documentation**
+   - Make sure to read the `documentation.md` file. It’s crucial to understand how everything works so you can explain it to your teachers and look like a genius.
+
+3. **Prepare Your Presentation**
+   - Use the visualizations and results to create a stunning presentation. Your teachers will be amazed at your technical prowess!
+
 ## **Installation**
 1. **Clone the Repository**
    ```bash
@@ -51,6 +64,12 @@ mbo_knapsack_project/
    ```bash
    pip install -r requirements.txt
    ```
+
+4. **Set Up Environment Variables**
+   - Create a `.env` file in the root directory of the project and add your Google Gemini API key:
+      ```
+      GEMINI_API_KEY=your_api_key_here
+      ```
 
 ---
 
@@ -75,6 +94,24 @@ mbo_knapsack_project/
    - `--max_gen`: Number of generations (default: 100).
    - `--mutation_rate`: Mutation probability (default: 0.01).
    - `--save_plots`: Save plots as images in `results/graphs/`.
+
+---
+## **Debugging and Manual Execution**
+For debugging purposes, you can manually run the solver as described above. However, for a more user-friendly experience, use the `main.py` script which provides a Tkinter-based UI. This interface leverages Google Gemini AI to generate real-world problems, convert them into knapsack instances, and solve them.
+
+### **Running the Tkinter UI**
+1. **Execute the Main Script**
+   ```bash
+   python main.py
+   ```
+
+2. **Features of the UI**
+   - **Problem Generation**: Automatically generate optimization problems using Google Gemini AI.
+   - **Instance Conversion**: Convert generated problems into knapsack instances.
+   - **Solution Visualization**: Visualize the solutions and fitness convergence within the UI.
+
+![Problem & Instance Generation](image-1.png)
+![Solution Generation & Visualization](image.png)
 
 ---
 
