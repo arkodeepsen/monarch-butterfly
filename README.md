@@ -74,7 +74,7 @@ Feel free to use this project for your first or second-semester college project.
 ---
 
 ## **Usage**
-### **Running the Knapsack Solver**
+### **Running the Knapsack Solver Manually (For Debugging & Custom Instances)**
 1. **Prepare Knapsack Instance**
    - Add your instance files in `data/knapsack_instances/` in the format:
      ```
@@ -96,7 +96,7 @@ Feel free to use this project for your first or second-semester college project.
    - `--save_plots`: Save plots as images in `results/graphs/`.
 
 ---
-## **Debugging and Manual Execution**
+## **Automatic Usage With Interface (Recommended)**
 For debugging purposes, you can manually run the solver as described above. However, for a more user-friendly experience, use the `main.py` script which provides a Tkinter-based UI. This interface leverages Google Gemini AI to generate real-world problems, convert them into knapsack instances, and solve them.
 
 ### **Running the Tkinter UI**
