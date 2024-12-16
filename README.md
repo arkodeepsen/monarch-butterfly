@@ -51,7 +51,7 @@ Feel free to use this project for your first or second-semester college project.
 1. **Clone the Repository**
    ```bash
    git clone https://github.com/arkodeepsen/Monarch-Butterfly.git
-   cd mbo_knapsack_project
+   cd monarch-butterfly
    ```
 
 2. **Create a Virtual Environment**
